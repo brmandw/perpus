@@ -16,4 +16,8 @@ class IndexController extends Controller
     {
         return view("petugas.index");
     }
+    public function indexPeminjam()
+    {
+        return view("peminjam.index");
+    }
 }

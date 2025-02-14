@@ -90,3 +90,9 @@ Route::middleware(['auth', 'role:petugas'])->group(function () {
     Route::get('/data-peminjamanan-petugas', [DataPeminjamanController::class, 'indexPetugas'])->name('petugas.datapeminjaman.index');
     Route::get('/kategori-buku-petugas', [KategoriBukuController::class, 'indexPetugas'])->name('petugas.kategoribuku.index');
 });
+
+Route::middleware(['auth', 'role:peminjam'])->group(function () {
+    Route::get('/index-peminjam', [IndexController::class, 'indexPeminjam'])->name('peminjam.index');
+    Route::get('/perpustakaan', [DataBukuController::class, 'perpustakaan'])->name('peminjam.perpustakaan.index');
+    Route::get('/koleksipribadi', [DataBukuController::class, 'index'])->name('peminjam.koleksipribadi.index');
+});

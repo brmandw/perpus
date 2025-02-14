@@ -17,6 +17,12 @@ class DataBukuController extends Controller
         return view('admin.databuku.index', compact('data_buku')); 
     }
 
+    public function perpustakaan()
+    {
+        $data_buku = DataBuku::all();
+        return view('peminjam.perpustakaan.index', compact('data_buku')); 
+    }
+
     public function create()
     {
         $data_buku = DataBuku::all();

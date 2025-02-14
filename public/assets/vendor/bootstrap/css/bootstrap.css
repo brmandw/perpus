@@ -4505,10 +4505,21 @@ textarea.form-control-lg {
 }
 
 .card-img,
-.card-img-top,
 .card-img-bottom {
   width: 100%;
 }
+
+.card-img-top {
+  width: 150px; /* Atur lebar tetap */
+  height: 225px; /* Sesuaikan tinggi agar tetap rasio 2:3 */
+  object-fit: cover;
+}
+
+
+.card-perpus {
+  width: fit-content;
+}
+
 
 .card-img,
 .card-img-top {
